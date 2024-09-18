@@ -10,13 +10,13 @@ class SortingAlgorithm(Algorithm):
         self.generate_dataset()
 
     def generate_dataset(self, n = 50):
-        self.data_set = [random.randint(10, HEIGHT - 10) for _ in range(n)]
+        self.data_set = [random.randint(10, 500 - 10) for _ in range(n)]
         self.resolved = False
     def draw_dataset(self, win, colors):
         bar_width = WIDTH // (len(self.data_set) + 1)
         for i, height in enumerate(self.data_set):
             color = colors[i] if i < len(colors) else BLACK
-            pygame.draw.rect(win, color, (i * bar_width, HEIGHT - height, bar_width, height))
+            pygame.draw.rect(win, color, (i * bar_width, win.get_height() - height, bar_width, height))
 
 class RecursionAlgorithm(Algorithm):
     def __init__(self, algorithm_name):
@@ -25,13 +25,13 @@ class RecursionAlgorithm(Algorithm):
         self.generate_dataset()
 
     def generate_dataset(self, n = 50):
-        self.data_set = [random.randint(10, HEIGHT - 10) for _ in range(n)]
+        self.data_set = [random.randint(10, 500 - 10) for _ in range(n)]
         self.resolved = False
     def draw_dataset(self, win, colors):
-        bar_width = WIDTH // (len(self.data_set) + 1)
+        bar_width = win.get_width() // (len(self.data_set) + 1)
         for i, height in enumerate(self.data_set):
             color = colors[i] if i < len(colors) else BLACK
-            pygame.draw.rect(win, color, (i * bar_width, HEIGHT - height, bar_width, height))
+            pygame.draw.rect(win, color, (i * bar_width, win.get_height() - height, bar_width, height))
 
 class SearchAlgorithm(Algorithm):
     sorted = False
@@ -52,7 +52,7 @@ class SearchAlgorithm(Algorithm):
         self.resolved = False
 
     def draw_dataset(self, win, colors):
-        box_width = WIDTH // (len(self.data_set) + 5)
+        box_width = win.get_width() // (len(self.data_set) + 5)
         for i, value in enumerate(self.data_set):
             if value == self.value and colors[i] != GREEN:
                 color = BLUE
@@ -60,4 +60,4 @@ class SearchAlgorithm(Algorithm):
                 color = colors[i]
             else:
                 color = BLACK
-            pygame.draw.rect(win, color, (i * box_width + 2 * i, HEIGHT / 2 - 40, box_width, 80))
+            pygame.draw.rect(win, color, (i * box_width + 2 * i, win.get_height() / 2 - 40, box_width, 80))

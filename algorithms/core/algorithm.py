@@ -2,7 +2,7 @@ import pygame
 import time
 
 from algorithms.core.time_complexity import TimeComplexity
-from config import WHITE, WIDTH, BLACK
+from config import WHITE, BLACK
 
 class Algorithm:
     waiting_time = 0.01
@@ -19,6 +19,7 @@ class Algorithm:
     time_took: float
 
     def __init__(self, algorithm_type):
+        self.font = None
         self.algorithm_type = algorithm_type
         self.data_set = []
 
@@ -34,7 +35,7 @@ class Algorithm:
             self.draw_dataset(win, colors)
         finally:
             title = self.font.render(self.title(), 1, BLACK)
-            win.blit(title, (WIDTH // 2 - title.get_width() // 2, 10))
+            win.blit(title, (win.get_width() // 2 - title.get_width() // 2, 10))
             pygame.display.update()
 
     def draw_dataset(self, win, colors):
