@@ -34,10 +34,11 @@ class RecursionAlgorithm(Algorithm):
             pygame.draw.rect(win, color, (i * bar_width, HEIGHT - height, bar_width, height))
 
 class SearchAlgorithm(Algorithm):
+    sorted = False
+
     def __init__(self, algorithm_name):
         super().__init__("Searching Algorithm")
         self.value = None
-        self.sorted = False
         self.waiting_time = 0.1
         self.algorithm_name = algorithm_name
         self.generate_dataset()
