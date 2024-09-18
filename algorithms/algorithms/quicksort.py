@@ -1,3 +1,4 @@
+from algorithms.core.time_complexity import TimeComplexity
 from config import *
 from algorithms.core import RecursionAlgorithm
 
@@ -5,11 +6,13 @@ class QuickSort(RecursionAlgorithm):
     def __init__(self):
         super().__init__("Quick Sort")
         self.waiting_time = 0.2
+        self.time_complexity = TimeComplexity.O_NLOG
 
     def partition(self, start, end, win):
         pivot = self.data_set[end]
         i = start - 1
         for j in range(start, end):
+            self.iterate()
             if self.data_set[j] < pivot:
                 i += 1
                 self.data_set[i], self.data_set[j] = self.data_set[j], self.data_set[i]

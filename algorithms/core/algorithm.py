@@ -45,11 +45,12 @@ class Algorithm:
 
     def execute(self, win):
         if not self.resolved:
+            self.iterations = 0
             s_time = time.time()
             self.run(win)
             self.time_took = time.time() - s_time
             self.set_resolved()
-
+        print(f"Time took: {self.time_took}\nIterations: {self.iterations}")
     def wait(self):
         if self.can_wait:
             time.sleep(self.waiting_time)

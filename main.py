@@ -24,6 +24,8 @@ def main():
                 running = False
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE:
+                    if algorithms[current_algo].is_resolved():
+                        algorithms[current_algo].generate_dataset()
                     algorithms[current_algo].execute(WIN)
                 if event.key == pygame.K_RIGHT:
                     current_algo = (current_algo + 1) % len(algorithms)
