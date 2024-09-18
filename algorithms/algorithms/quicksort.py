@@ -27,4 +27,3 @@ class QuickSort(RecursionAlgorithm):
 
     def run(self, win):
         self.quick_sort(0, len(self.data_set) - 1, win)
-        self.draw(win, [GREEN] * len(self.data_set))
