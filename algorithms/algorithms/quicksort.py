@@ -4,6 +4,7 @@ from algorithms.core import RecursionAlgorithm
 class QuickSort(RecursionAlgorithm):
     def __init__(self):
         super().__init__("Quick Sort")
+        self.waiting_time = 0.2
 
     def partition(self, start, end, win):
         pivot = self.data_set[end]
