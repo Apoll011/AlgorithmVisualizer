@@ -30,10 +30,8 @@ def main():
                     algorithms[current_algo].set_font(FONT)
                 if event.key == pygame.K_LSHIFT:
                     algorithms[current_algo].slow_mo_speed_up()
-
-        if algorithms[current_algo].is_resolved():
-            time.sleep(2)
-            algorithms[current_algo].generate_dataset()
+                if event.key == pygame.K_g:
+                    algorithms[current_algo].generate_dataset()
 
         algorithms[current_algo].draw(WIN, [BLACK] * len(algorithms[current_algo].data_set))
 
