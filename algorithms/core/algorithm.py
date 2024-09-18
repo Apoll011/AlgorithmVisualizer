@@ -1,5 +1,7 @@
 import pygame
 import time
+
+from algorithms.core.time_complexity import TimeComplexity
 from config import WHITE, WIDTH, BLACK
 
 class Algorithm:
@@ -11,6 +13,10 @@ class Algorithm:
     resolved = False
 
     algorithm_type = ""
+
+    iterations = 0
+    time_complexity: TimeComplexity
+    time_took: float
 
     def __init__(self, algorithm_type):
         self.algorithm_type = algorithm_type
@@ -39,8 +45,10 @@ class Algorithm:
 
     def execute(self, win):
         if not self.resolved:
+            s_time = time.time()
             self.run(win)
-        self.set_resolved()
+            self.time_took = time.time() - s_time
+            self.set_resolved()
 
     def wait(self):
         if self.can_wait:
@@ -57,3 +65,6 @@ class Algorithm:
 
     def title(self):
         return f"{self.algorithm_type} ({self.algorithm_name}){"*" if self.can_wait else ""}"
+
+    def iterate(self):
+        self.iterations += 1
