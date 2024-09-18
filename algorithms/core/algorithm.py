@@ -35,6 +35,11 @@ class Algorithm:
     def run(self, win):
         pass  # To be implemented by subclasses
 
+    def execute(self, win):
+        if not self.resolved:
+            self.run(win)
+        self.set_resolved()
+
     def wait(self):
         if self.can_wait:
             time.sleep(self.waiting_time)
