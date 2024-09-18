@@ -43,7 +43,8 @@ class SearchAlgorithm(Algorithm):
         self.generate_dataset()
 
     def generate_dataset(self, n = 50):
-        self.data_set = [random.randint(10, HEIGHT - 10) for _ in range(n)]
+        self.data_set = list(set([random.randint(0, 500) for _ in range(n)]))
+
         if self.sorted:
             self.data_set = sorted(self.data_set)
         self.value = random.choice(self.data_set)
