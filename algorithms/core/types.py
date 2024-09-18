@@ -7,8 +7,9 @@ class SortingAlgorithm(Algorithm):
     def __init__(self, algorithm_name):
         super().__init__("Sorting Algorithm")
         self.algorithm_name = algorithm_name
+        self.generate_dataset()
 
-    def generate_dataset(self, n):
+    def generate_dataset(self, n = 50):
         self.data_set = [random.randint(10, HEIGHT - 10) for _ in range(n)]
         self.resolved = False
     def draw_dataset(self, win, colors):
@@ -21,8 +22,9 @@ class RecursionAlgorithm(Algorithm):
     def __init__(self, algorithm_name):
         super().__init__("Recursion Algorithm")
         self.algorithm_name = algorithm_name
+        self.generate_dataset()
 
-    def generate_dataset(self, n):
+    def generate_dataset(self, n = 50):
         self.data_set = [random.randint(10, HEIGHT - 10) for _ in range(n)]
         self.resolved = False
     def draw_dataset(self, win, colors):
@@ -38,8 +40,9 @@ class SearchAlgorithm(Algorithm):
         self.sorted = False
         self.waiting_time = 0.1
         self.algorithm_name = algorithm_name
+        self.generate_dataset()
 
-    def generate_dataset(self, n):
+    def generate_dataset(self, n = 50):
         self.data_set = [random.randint(10, HEIGHT - 10) for _ in range(n)]
         if self.sorted:
             self.data_set = sorted(self.data_set)

@@ -14,7 +14,7 @@ class Algorithm:
         self.type = type
         self.data_set = []
 
-    def generate_dataset(self, n):
+    def generate_dataset(self, n = 50):
         pass
 
     def set_font(self, font):

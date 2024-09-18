@@ -33,7 +33,7 @@ def main():
 
         if algorithms[current_algo].is_resolved():
             time.sleep(2)
-            algorithms[current_algo].generate_dataset(50)
+            algorithms[current_algo].generate_dataset()
 
         algorithms[current_algo].draw(WIN, [BLACK] * len(algorithms[current_algo].data_set))
 
