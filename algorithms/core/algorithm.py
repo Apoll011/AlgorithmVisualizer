@@ -19,6 +19,7 @@ class Algorithm:
     time_took: float
 
     def __init__(self, algorithm_type):
+        self.master = None
         self.font = None
         self.algorithm_type = algorithm_type
         self.data_set = []
@@ -37,20 +38,22 @@ class Algorithm:
             title = self.font.render(self.title(), 1, BLACK)
             win.blit(title, (win.get_width() // 2 - title.get_width() // 2, 10))
             pygame.display.update()
-
+            self.blit(win)
     def draw_dataset(self, win, colors):
         pass
 
     def run(self, win):
         pass  # To be implemented by subclasses
 
-    def execute(self, win):
+    def execute(self, win, WIN):
         if not self.resolved:
+            self.master = WIN
             self.iterations = 0
             s_time = time.time()
             self.run(win)
             self.time_took = time.time() - s_time
             self.set_resolved()
+            self.master = None
         print(f"Time took: {self.time_took}\nIterations: {self.iterations}")
     def wait(self):
         if self.can_wait:
@@ -70,3 +73,7 @@ class Algorithm:
 
     def iterate(self):
         self.iterations += 1
+
+    def blit(self, main_surface):
+        if self.master is not None:
+            self.master.blit(main_surface, (0, 0))

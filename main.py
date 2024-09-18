@@ -10,6 +10,8 @@ FONT = pygame.font.SysFont('comicsans', 30)
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Algorithm Visualizer")
 
+main_surface = pygame.Surface((WIDTH * 0.7, HEIGHT * 0.7))
+
 def main():
     running = True
     clock = pygame.time.Clock()
@@ -26,7 +28,7 @@ def main():
                 if event.key == pygame.K_SPACE:
                     if algorithms[current_algo].is_resolved():
                         algorithms[current_algo].generate_dataset()
-                    algorithms[current_algo].execute(WIN)
+                    algorithms[current_algo].execute(main_surface, WIN)
                 if event.key == pygame.K_RIGHT:
                     current_algo = (current_algo + 1) % len(algorithms)
                     algorithms[current_algo].set_font(FONT)
@@ -35,7 +37,8 @@ def main():
                 if event.key == pygame.K_g:
                     algorithms[current_algo].generate_dataset()
 
-        algorithms[current_algo].draw(WIN, [BLACK] * len(algorithms[current_algo].data_set))
+        algorithms[current_algo].draw(main_surface, [BLACK] * len(algorithms[current_algo].data_set))
+        WIN.blit(main_surface, (0, 0))
 
     pygame.quit()
 
