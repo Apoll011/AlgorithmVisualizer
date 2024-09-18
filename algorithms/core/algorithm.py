@@ -18,6 +18,7 @@ class Algorithm:
     time_complexity: TimeComplexity
     time_took: float
 
+    description = "Algorithm "
     def __init__(self, algorithm_type):
         self.master = None
         self.font = None
@@ -35,8 +36,6 @@ class Algorithm:
         try:
             self.draw_dataset(win, colors)
         finally:
-            title = self.font.render(self.title(), 1, BLACK)
-            win.blit(title, (win.get_width() // 2 - title.get_width() // 2, 10))
             pygame.display.update()
             self.blit(win)
     def draw_dataset(self, win, colors):
@@ -77,3 +76,16 @@ class Algorithm:
     def blit(self, main_surface):
         if self.master is not None:
             self.master.blit(main_surface, (0, 0))
+
+    def params(self):
+        return {
+            "Iterations": self.iterations,
+            "Time complexity": self.time_complexity.value,
+            "Time Took": self.get_time()
+        }
+
+    def get_time(self):
+        try:
+            return self.time_took
+        except Exception:
+            return 0
