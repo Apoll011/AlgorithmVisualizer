@@ -35,6 +35,10 @@ def main():
                     algorithms[current_algo].generate_dataset()
                     current_algo = (current_algo + 1) % len(algorithms)
                     algorithms[current_algo].set_font(FONT)
+                if event.key == pygame.K_LEFT:
+                    algorithms[current_algo].generate_dataset()
+                    current_algo = (current_algo - 1) % len(algorithms)
+                    algorithms[current_algo].set_font(FONT)
                 if event.key == pygame.K_LSHIFT:
                     algorithms[current_algo].slow_mo_speed_up()
                 if event.key == pygame.K_g:
