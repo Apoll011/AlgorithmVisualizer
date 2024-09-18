@@ -10,8 +10,10 @@ class Algorithm:
 
     resolved = False
 
-    def __init__(self, type):
-        self.type = type
+    algorithm_type = ""
+
+    def __init__(self, algorithm_type):
+        self.algorithm_type = algorithm_type
         self.data_set = []
 
     def generate_dataset(self, n = 50):
@@ -25,7 +27,7 @@ class Algorithm:
         try:
             self.draw_dataset(win, colors)
         finally:
-            title = self.font.render(f"{self.type} ({self.algorithm_name}){"*" if self.can_wait else ""}", 1, BLACK)
+            title = self.font.render(self.title(), 1, BLACK)
             win.blit(title, (WIDTH // 2 - title.get_width() // 2, 10))
             pygame.display.update()
 
@@ -52,3 +54,6 @@ class Algorithm:
 
     def is_resolved(self):
         return  self.resolved
+
+    def title(self):
+        return f"{self.algorithm_type} ({self.algorithm_name}){"*" if self.can_wait else ""}"
