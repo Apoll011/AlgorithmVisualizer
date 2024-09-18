@@ -1,4 +1,3 @@
-import time
 from config import *
 from algorithms.core import SearchAlgorithm
 
@@ -12,6 +11,5 @@ class LinearSearchAlgorithm(SearchAlgorithm):
             colors = [GREEN if x == i else BLACK for x in range(n)]
             self.draw(win, colors)
             if self.data_set[i] == self.value:
-                time.sleep(2)
                 break
             self.wait()

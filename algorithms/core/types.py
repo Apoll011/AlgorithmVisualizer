@@ -10,7 +10,7 @@ class SortingAlgorithm(Algorithm):
 
     def generate_dataset(self, n):
         self.data_set = [random.randint(10, HEIGHT - 10) for _ in range(n)]
-
+        self.resolved = False
     def draw_dataset(self, win, colors):
         bar_width = WIDTH // (len(self.data_set) + 1)
         for i, height in enumerate(self.data_set):
@@ -24,7 +24,7 @@ class RecursionAlgorithm(Algorithm):
 
     def generate_dataset(self, n):
         self.data_set = [random.randint(10, HEIGHT - 10) for _ in range(n)]
-
+        self.resolved = False
     def draw_dataset(self, win, colors):
         bar_width = WIDTH // (len(self.data_set) + 1)
         for i, height in enumerate(self.data_set):
@@ -44,6 +44,7 @@ class SearchAlgorithm(Algorithm):
         if self.sorted:
             self.data_set = sorted(self.data_set)
         self.value = random.choice(self.data_set)
+        self.resolved = False
 
     def draw_dataset(self, win, colors):
         box_width = WIDTH // (len(self.data_set) + 5)

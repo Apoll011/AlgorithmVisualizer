@@ -1,4 +1,5 @@
 import pygame
+import time
 from config import *
 from algorithms.algorithms import *
 
@@ -23,14 +24,17 @@ def main():
                 running = False
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE:
-                    algorithms[current_algo].generate_dataset(50)
                     algorithms[current_algo].run(WIN)
+                    algorithms[current_algo].set_resolved()
                 if event.key == pygame.K_RIGHT:
                     current_algo = (current_algo + 1) % len(algorithms)
                     algorithms[current_algo].set_font(FONT)
-                    algorithms[current_algo].generate_dataset(50)
                 if event.key == pygame.K_LSHIFT:
                     algorithms[current_algo].slow_mo_speed_up()
+
+        if algorithms[current_algo].is_resolved():
+            time.sleep(2)
+            algorithms[current_algo].generate_dataset(50)
 
         algorithms[current_algo].draw(WIN, [BLACK] * len(algorithms[current_algo].data_set))
 

@@ -7,6 +7,9 @@ class Algorithm:
     algorithm_name = ""
 
     can_wait = False
+
+    resolved = False
+
     def __init__(self, type):
         self.type = type
         self.data_set = []
@@ -38,3 +41,9 @@ class Algorithm:
 
     def slow_mo_speed_up(self):
         self.can_wait = not self.can_wait
+
+    def set_resolved(self):
+        self.resolved = True
+
+    def is_resolved(self):
+        return  self.resolved
