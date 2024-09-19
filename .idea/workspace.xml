@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="Change core path to base">
-      <change beforePath="$PROJECT_DIR$/algorithm/linear/.config" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/linear/.config" afterDir="false" />
-    </list>
+    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="Fixed typo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -334,7 +332,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726756026870</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Fixed bug in linear algorithm">
+      <option name="closed" value="true" />
+      <created>1726756383572</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1726756383572</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Fixed typo">
+      <option name="closed" value="true" />
+      <created>1726756471662</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1726756471662</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -349,8 +363,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CHanged wait time on QuickSOrt Algorithm" />
-    <MESSAGE value="Removed color fill on the end of algorithm QuickSort" />
     <MESSAGE value="Fixed bug in search algorithm in witch some times the dataset would have repeated datas" />
     <MESSAGE value="Added abillity to dynamically change the tittle of an algorithm" />
     <MESSAGE value="Fixed bug in witch the sorted functionallyti would not work on the first dataset generation" />
@@ -374,7 +386,9 @@
     <MESSAGE value="Added quick sort to algoritms list" />
     <MESSAGE value="Removed old algorithms" />
     <MESSAGE value="Change core path to base" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change core path to base" />
+    <MESSAGE value="Fixed bug in linear algorithm" />
+    <MESSAGE value="Fixed typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed typo" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

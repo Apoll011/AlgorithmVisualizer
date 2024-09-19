@@ -81,7 +81,7 @@ class AlgorithmVisualizer:
 
         # Draw on description surface
         title = self.font.render(self.current.title(), 1, BLACK)
-        self.description_surface.blit(title, (self.config_surface.get_width() // 2, 10))
+        self.description_surface.blit(title, (self.description_surface.get_width() //2 - title.get_width() //2, 10))
         description_text = self.font.render(self.current.description, True, BLACK)
         self.description_surface.blit(description_text, (10, 25))
 
