@@ -44,6 +44,7 @@ class Algorithm:
         self.font = font
 
     def draw(self, win, colors):
+        self.iterate()
         win.fill(WHITE)
         try:
             self.draw_dataset(win, colors)

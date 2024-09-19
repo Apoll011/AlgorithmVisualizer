@@ -26,7 +26,6 @@ class DivideAndConquerAlgorithm(Algorithm):
         n = len(self.data_set)
         half = len(dataset)//2
         half_value = dataset[half]
-        self.iterate()
         colors = [GREEN if x == self.data_set.index(half_value) else BLACK for x in range(n)]
         self.draw(win, colors)
         if half_value == self.value:

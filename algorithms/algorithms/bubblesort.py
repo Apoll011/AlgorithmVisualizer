@@ -18,7 +18,6 @@ class BubbleSort(Algorithm):
         n = len(self.data_set)
         for i in range(n):
             for j in range(0, n - i - 1):
-                self.iterate()
                 if self.data_set[j] > self.data_set[j + 1]:
                     self.data_set[j], self.data_set[j + 1] = self.data_set[j + 1], self.data_set[j]
                 colors = [GREEN if x == j or x == j + 1 else BLACK for x in range(n)]

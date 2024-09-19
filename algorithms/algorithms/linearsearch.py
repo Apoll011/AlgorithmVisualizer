@@ -15,10 +15,11 @@ class LinearSearchAlgorithm(Algorithm):
         self.drawer = DrawList()
         self.send_value_to_draw = True
         self.return_name = "Index"
+        self.waiting_time = 0.1
+
     def run(self, win):
         n = len(self.data_set)
         for i in range(n):
-            self.iterate()
             colors = [BLUE if self.value == self.data_set[x] else GREEN if x == i else BLACK for x in range(n)]
             self.draw(win, colors)
             if self.data_set[i] == self.value:

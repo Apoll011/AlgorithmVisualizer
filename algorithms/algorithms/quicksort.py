@@ -13,14 +13,12 @@ class QuickSort(Algorithm):
         self.generator = RandomList()
         self.algorithm_type = AlgorithmType.DIVIDE_AND_CONQUER
         self.drawer = DrawBarGraph()
-
         self.generate_dataset()
 
     def partition(self, start, end, win):
         pivot = self.data_set[end]
         i = start - 1
         for j in range(start, end):
-            self.iterate()
             if self.data_set[j] < pivot:
                 i += 1
                 self.data_set[i], self.data_set[j] = self.data_set[j], self.data_set[i]
