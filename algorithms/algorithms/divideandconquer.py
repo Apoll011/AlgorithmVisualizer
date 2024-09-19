@@ -1,3 +1,5 @@
+from codecs import replace_errors
+
 from algorithms.core.algorithm import Algorithm
 from algorithms.core.dataset_generator import RandomList
 from algorithms.core.draw import DrawList
@@ -15,9 +17,10 @@ class DivideAndConquerAlgorithm(Algorithm):
         self.algorithm_type = AlgorithmType.DIVIDE_AND_CONQUER
         self.drawer = DrawList()
         self.send_value_to_draw = True
+        self.return_name = "Index"
 
     def run(self, win):
-        self.search(self.data_set, win)
+        return self.search(self.data_set, win)
 
     def search(self, dataset, win):
         n = len(self.data_set)
@@ -27,8 +30,8 @@ class DivideAndConquerAlgorithm(Algorithm):
         colors = [GREEN if x == self.data_set.index(half_value) else BLACK for x in range(n)]
         self.draw(win, colors)
         if half_value == self.value:
-            pass
+            return self.data_set.index(half_value)
         elif half_value > self.value:
-            self.search(dataset[:half], win)
+            return self.search(dataset[:half], win)
         else:
-            self.search(dataset[half+1:], win)
+            return self.search(dataset[half+1:], win)

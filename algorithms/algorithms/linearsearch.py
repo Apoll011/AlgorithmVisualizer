@@ -14,7 +14,7 @@ class LinearSearchAlgorithm(Algorithm):
         self.algorithm_type = AlgorithmType.SEARCH
         self.drawer = DrawList()
         self.send_value_to_draw = True
-
+        self.return_name = "Index"
     def run(self, win):
         n = len(self.data_set)
         for i in range(n):
@@ -22,4 +22,4 @@ class LinearSearchAlgorithm(Algorithm):
             colors = [BLUE if self.value == self.data_set[x] else GREEN if x == i else BLACK for x in range(n)]
             self.draw(win, colors)
             if self.data_set[i] == self.value:
-                break
+                return i

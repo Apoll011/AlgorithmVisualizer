@@ -37,3 +37,4 @@ class QuickSort(Algorithm):
 
     def run(self, win):
         self.quick_sort(0, len(self.data_set) - 1, win)
+        return self.data_set

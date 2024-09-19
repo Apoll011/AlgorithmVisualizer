@@ -23,6 +23,7 @@ class Algorithm:
 
     description = "Algorithm "
     def __init__(self, algorithm_name):
+        self.returned = None
         self.master = None
         self.font = None
         self.algorithm_name = algorithm_name
@@ -30,12 +31,14 @@ class Algorithm:
         self.algorithm_type: AlgorithmType | None = None
         self.drawer: Draw | None = None
         self.send_value_to_draw = False
+        self.return_name = "Returned"
 
     def generate_dataset(self):
         self.generator.generate()
         self.resolved = False
         self.iterations = 0
         self.time_took = 0
+        self.returned = None
 
     def set_font(self, font):
         self.font = font
@@ -60,7 +63,7 @@ class Algorithm:
             self.master = WIN
             self.iterations = 0
             s_time = time.time()
-            self.run(win)
+            self.returned = self.run(win)
             self.time_took = time.time() - s_time
             self.set_resolved()
             self.master = None
@@ -92,7 +95,9 @@ class Algorithm:
         return {
             "Iterations": self.iterations,
             "Time complexity": self.time_complexity.value,
-            "Time Took": self.get_time()
+            "Time Took": self.get_time(),
+            "Value": self.value if self.value_exists() else "NULL",
+            f"{self.return_name}": self.returned if type(self.returned) != list else "[...]"
         }
 
     def get_time(self):
@@ -108,3 +113,6 @@ class Algorithm:
     @property
     def value(self):
         return self.generator.get_value()
+
+    def value_exists(self):
+        return self.generator.value is not None

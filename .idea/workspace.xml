@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="Refactored the code">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="Fixed some bug related to Display">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/algorithms/bubblesort.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/bubblesort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/algorithms/divideandconquer.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/divideandconquer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/algorithms/linearsearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/linearsearch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/algorithms/quicksort.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/quicksort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/core/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/core/algorithm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726746027224</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Fixed some bug related to Display">
+      <option name="closed" value="true" />
+      <created>1726746323748</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1726746323748</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -287,6 +300,7 @@
     <MESSAGE value="Added support for multiple window" />
     <MESSAGE value="Added support for left arrow click" />
     <MESSAGE value="Refactored the code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored the code" />
+    <MESSAGE value="Fixed some bug related to Display" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some bug related to Display" />
   </component>
 </project>

@@ -23,3 +23,4 @@ class BubbleSort(Algorithm):
                     self.data_set[j], self.data_set[j + 1] = self.data_set[j + 1], self.data_set[j]
                 colors = [GREEN if x == j or x == j + 1 else BLACK for x in range(n)]
                 self.draw(win, colors)
+        return self.data_set
