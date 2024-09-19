@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="If the algorithim is resolved set value to green">
-      <change afterPath="$PROJECT_DIR$/algorithm/quicksort/.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithm/quicksort/run.py" afterDir="false" />
+    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="Change core path to base">
+      <change beforePath="$PROJECT_DIR$/algorithm/linear/.config" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/linear/.config" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,25 +38,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "Python.scratch.executor": "Run",
-    "Python.t.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/pegasus/development/AlgoVisu/algorithm/quicksort"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scratch.executor&quot;: &quot;Run&quot;,
+    &quot;Python.t.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/pegasus/development/AlgoVisu/algorithm/quicksort&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Python"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Python&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/algorithm/quicksort" />
       <recent name="$PROJECT_DIR$/algorithm" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/algorithms" />
     </key>
   </component>
   <component name="RunManager">
@@ -308,7 +310,31 @@
       <option name="project" value="LOCAL" />
       <updated>1726755500893</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Added quick sort to algoritms list">
+      <option name="closed" value="true" />
+      <created>1726755908898</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1726755908898</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Removed old algorithms">
+      <option name="closed" value="true" />
+      <created>1726756014905</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1726756014905</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Change core path to base">
+      <option name="closed" value="true" />
+      <created>1726756026870</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1726756026870</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -323,9 +349,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Now after resolving the problem tha algorithim visualizer wait and creates another one" />
-    <MESSAGE value="MAin execute function in algorithim that only run if not resolved" />
-    <MESSAGE value="Now it automatically in the starts generates a new dataset" />
     <MESSAGE value="CHanged wait time on QuickSOrt Algorithm" />
     <MESSAGE value="Removed color fill on the end of algorithm QuickSort" />
     <MESSAGE value="Fixed bug in search algorithm in witch some times the dataset would have repeated datas" />
@@ -348,7 +371,10 @@
     <MESSAGE value="Now it iterates inside draw method" />
     <MESSAGE value="NOw the algorithm are complitely isolated from the code base (plugins)" />
     <MESSAGE value="If the algorithim is resolved set value to green" />
-    <option name="LAST_COMMIT_MESSAGE" value="If the algorithim is resolved set value to green" />
+    <MESSAGE value="Added quick sort to algoritms list" />
+    <MESSAGE value="Removed old algorithms" />
+    <MESSAGE value="Change core path to base" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change core path to base" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
