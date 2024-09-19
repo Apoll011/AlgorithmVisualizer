@@ -1,1 +1,1 @@
-from .types import SortingAlgorithm, SearchAlgorithm, RecursionAlgorithm
+from .types import AlgorithmType

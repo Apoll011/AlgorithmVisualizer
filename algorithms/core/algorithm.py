@@ -1,8 +1,11 @@
 import pygame
 import time
 
+from algorithms.core import AlgorithmType
+from algorithms.core.dataset_generator import Generator
+from algorithms.core.draw import Draw
 from algorithms.core.time_complexity import TimeComplexity
-from config import WHITE, BLACK
+from config import WHITE
 
 class Algorithm:
     waiting_time = 0.01
@@ -19,14 +22,20 @@ class Algorithm:
     time_took: float
 
     description = "Algorithm "
-    def __init__(self, algorithm_type):
+    def __init__(self, algorithm_name):
         self.master = None
         self.font = None
-        self.algorithm_type = algorithm_type
-        self.data_set = []
+        self.algorithm_name = algorithm_name
+        self.generator: Generator | None = None
+        self.algorithm_type: AlgorithmType | None = None
+        self.drawer: Draw | None = None
+        self.send_value_to_draw = False
 
-    def generate_dataset(self, n = 50):
-        pass
+    def generate_dataset(self):
+        self.generator.generate()
+        self.resolved = False
+        self.iterations = 0
+        self.time_took = 0
 
     def set_font(self, font):
         self.font = font
@@ -38,8 +47,10 @@ class Algorithm:
         finally:
             pygame.display.update()
             self.blit(win)
+            self.wait()
+
     def draw_dataset(self, win, colors):
-        pass
+        self.drawer.draw(win, colors, self.data_set, self.value if self.send_value_to_draw else None)
 
     def run(self, win):
         pass  # To be implemented by subclasses
@@ -68,7 +79,7 @@ class Algorithm:
         return  self.resolved
 
     def title(self):
-        return f"{self.algorithm_type} ({self.algorithm_name}){"*" if self.can_wait else ""}"
+        return f"{self.algorithm_type.value.replace('_', ' ').title()} Algorithm ({self.algorithm_name}){"*" if self.can_wait else ""}"
 
     def iterate(self):
         self.iterations += 1
@@ -87,5 +98,13 @@ class Algorithm:
     def get_time(self):
         try:
             return self.time_took
-        except Exception:
+        except UnboundLocalError:
             return 0
+
+    @property
+    def data_set(self):
+        return  self.generator.get_dataset()
+
+    @property
+    def value(self):
+        return self.generator.get_value()

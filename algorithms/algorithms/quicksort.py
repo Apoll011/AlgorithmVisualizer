@@ -1,12 +1,20 @@
+from algorithms.core import AlgorithmType
+from algorithms.core.dataset_generator import RandomList
+from algorithms.core.draw import DrawBarGraph
 from algorithms.core.time_complexity import TimeComplexity
 from config import *
-from algorithms.core import RecursionAlgorithm
+from algorithms.core.algorithm import Algorithm
 
-class QuickSort(RecursionAlgorithm):
+class QuickSort(Algorithm):
     def __init__(self):
         super().__init__("Quick Sort")
         self.waiting_time = 0.2
         self.time_complexity = TimeComplexity.O_NLOG
+        self.generator = RandomList()
+        self.algorithm_type = AlgorithmType.DIVIDE_AND_CONQUER
+        self.drawer = DrawBarGraph()
+
+        self.generate_dataset()
 
     def partition(self, start, end, win):
         pivot = self.data_set[end]
@@ -18,8 +26,7 @@ class QuickSort(RecursionAlgorithm):
                 self.data_set[i], self.data_set[j] = self.data_set[j], self.data_set[i]
             colors = [RED if x == end else GREEN if x == i or x == j else BLACK for x in range(len(self.data_set))]
             self.draw(win, colors)
-            self.wait()
-        self.data_set[i + 1], self.data_set[end] = self.data_set[end], self.data_set[i + 1]
+            self.data_set[i + 1], self.data_set[end] = self.data_set[end], self.data_set[i + 1]
         return i + 1
 
     def quick_sort(self, start, end, win):

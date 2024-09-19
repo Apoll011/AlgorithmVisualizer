@@ -1,30 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="" />
+    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="Added support for left arrow click">
+      <change afterPath="$PROJECT_DIR$/algorithms/core/dataset_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithms/core/draw.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/algorithms/bubblesort.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/bubblesort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/algorithms/divideandconquer.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/divideandconquer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/algorithms/linearsearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/linearsearch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/algorithms/quicksort.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/quicksort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/core/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/core/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/core/algorithm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/core/types.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/core/types.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="test/multiple-surfaces" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2mFJladjfqxTzUihnhwYRH9fTo1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scratch.executor&quot;: &quot;Run&quot;,
+    &quot;Python.t.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Python&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="AlgoVisu" />
@@ -65,17 +102,192 @@
       <option name="presentableId" value="Default" />
       <updated>1726666542382</updated>
     </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <option name="closed" value="true" />
+      <created>1726673011025</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1726673011025</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Now after resolving the problem tha algorithim visualizer wait and creates another one">
+      <option name="closed" value="true" />
+      <created>1726673454280</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726673454280</updated>
+    </task>
+    <task id="LOCAL-00003" summary="MAin execute function in algorithim that only run if not resolved">
+      <option name="closed" value="true" />
+      <created>1726673767860</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726673767860</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Now it automatically in the starts generates a new dataset">
+      <option name="closed" value="true" />
+      <created>1726673926782</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1726673926782</updated>
+    </task>
+    <task id="LOCAL-00005" summary="CHanged wait time on QuickSOrt Algorithm">
+      <option name="closed" value="true" />
+      <created>1726674558220</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1726674558220</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Removed color fill on the end of algorithm QuickSort">
+      <option name="closed" value="true" />
+      <created>1726674584938</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1726674584939</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fixed bug in search algorithm in witch some times the dataset would have repeated datas">
+      <option name="closed" value="true" />
+      <created>1726674635664</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1726674635665</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added abillity to dynamically change the tittle of an algorithm">
+      <option name="closed" value="true" />
+      <created>1726674673694</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1726674673694</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fixed bug in witch the sorted functionallyti would not work on the first dataset generation">
+      <option name="closed" value="true" />
+      <created>1726676178783</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1726676178783</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added a new Algorithm Divid and conquer">
+      <option name="closed" value="true" />
+      <created>1726676197023</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1726676197023</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added buttun G to generate dataset">
+      <option name="closed" value="true" />
+      <created>1726677050931</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1726677050931</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added more algorithm data loke time complexity iteration time took">
+      <option name="closed" value="true" />
+      <created>1726677075364</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1726677075364</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Implemented new data into the algorithm">
+      <option name="closed" value="true" />
+      <created>1726677612860</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1726677612860</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added iterate to quick sort">
+      <option name="closed" value="true" />
+      <created>1726681440282</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1726681440282</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added multiple surfaces">
+      <option name="closed" value="true" />
+      <created>1726681512282</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1726681512282</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Now height and width are get fro win not config">
+      <option name="closed" value="true" />
+      <created>1726681931966</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1726681931966</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Now the algorithm visualizer is a surface">
+      <option name="closed" value="true" />
+      <created>1726682717410</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1726682717410</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added support for multiple window">
+      <option name="closed" value="true" />
+      <created>1726683190712</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1726683190712</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Added support for left arrow click">
+      <option name="closed" value="true" />
+      <created>1726683383745</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1726683383745</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit" />
+    <MESSAGE value="Now after resolving the problem tha algorithim visualizer wait and creates another one" />
+    <MESSAGE value="MAin execute function in algorithim that only run if not resolved" />
+    <MESSAGE value="Now it automatically in the starts generates a new dataset" />
+    <MESSAGE value="CHanged wait time on QuickSOrt Algorithm" />
+    <MESSAGE value="Removed color fill on the end of algorithm QuickSort" />
+    <MESSAGE value="Fixed bug in search algorithm in witch some times the dataset would have repeated datas" />
+    <MESSAGE value="Added abillity to dynamically change the tittle of an algorithm" />
+    <MESSAGE value="Fixed bug in witch the sorted functionallyti would not work on the first dataset generation" />
+    <MESSAGE value="Added a new Algorithm Divid and conquer" />
+    <MESSAGE value="Added buttun G to generate dataset" />
+    <MESSAGE value="Added more algorithm data loke time complexity iteration time took" />
+    <MESSAGE value="Implemented new data into the algorithm" />
+    <MESSAGE value="Added iterate to quick sort" />
+    <MESSAGE value="Added multiple surfaces" />
+    <MESSAGE value="Now height and width are get fro win not config" />
+    <MESSAGE value="Now the algorithm visualizer is a surface" />
+    <MESSAGE value="Added support for multiple window" />
+    <MESSAGE value="Added support for left arrow click" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added support for left arrow click" />
   </component>
 </project>

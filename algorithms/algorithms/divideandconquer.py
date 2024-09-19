@@ -1,12 +1,20 @@
+from algorithms.core.algorithm import Algorithm
+from algorithms.core.dataset_generator import RandomList
+from algorithms.core.draw import DrawList
 from algorithms.core.time_complexity import TimeComplexity
 from config import *
-from algorithms.core import SearchAlgorithm
+from algorithms.core import AlgorithmType
 
-class DivideAndConquerAlgorithm(SearchAlgorithm):
+class DivideAndConquerAlgorithm(Algorithm):
     def __init__(self):
-        self.sorted = True
         super().__init__("Divide and Conquer")
+        self.waiting_time = 0.2
         self.time_complexity = TimeComplexity.O_LOG
+        self.generator = RandomList(create_value=True, dataset_unique=True, is_dataset_sorted=True)
+        self.generate_dataset()
+        self.algorithm_type = AlgorithmType.DIVIDE_AND_CONQUER
+        self.drawer = DrawList()
+        self.send_value_to_draw = True
 
     def run(self, win):
         self.search(self.data_set, win)
@@ -18,7 +26,6 @@ class DivideAndConquerAlgorithm(SearchAlgorithm):
         self.iterate()
         colors = [GREEN if x == self.data_set.index(half_value) else BLACK for x in range(n)]
         self.draw(win, colors)
-        self.wait()
         if half_value == self.value:
             pass
         elif half_value > self.value:

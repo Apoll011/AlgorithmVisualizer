@@ -19,7 +19,7 @@ def main():
     clock = pygame.time.Clock()
     algorithms = [BubbleSort(), QuickSort(), LinearSearchAlgorithm(), DivideAndConquerAlgorithm()]  # Add more algorithms here
     current_algo = 0
-    algorithms[current_algo].generate_dataset(50)
+    algorithms[current_algo].generate_dataset()
     algorithms[current_algo].set_font(FONT)
     while running:
         clock.tick(60)
