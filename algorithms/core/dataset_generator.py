@@ -27,7 +27,7 @@ class Generator:
 
 class RandomList(Generator):
     def generate(self):
-        self.data_set = [random.randint(10, 500 - 10) for _ in range(self.length)]
+        self.data_set = [random.randint(0, 400) for _ in range(self.length)]
 
         if self.dataset_unique:
             self.data_set = list(set(self.data_set))

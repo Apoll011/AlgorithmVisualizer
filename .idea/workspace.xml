@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="Added support for left arrow click">
-      <change afterPath="$PROJECT_DIR$/algorithms/core/dataset_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithms/core/draw.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/algorithms/bubblesort.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/bubblesort.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/algorithms/divideandconquer.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/divideandconquer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/algorithms/linearsearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/linearsearch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/algorithms/quicksort.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/quicksort.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/core/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/core/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/core/algorithm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/core/types.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/core/types.py" afterDir="false" />
+    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="Refactored the code">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726683383745</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Refactored the code">
+      <option name="closed" value="true" />
+      <created>1726746027224</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1726746027224</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -288,6 +286,7 @@
     <MESSAGE value="Now the algorithm visualizer is a surface" />
     <MESSAGE value="Added support for multiple window" />
     <MESSAGE value="Added support for left arrow click" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added support for left arrow click" />
+    <MESSAGE value="Refactored the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored the code" />
   </component>
 </project>

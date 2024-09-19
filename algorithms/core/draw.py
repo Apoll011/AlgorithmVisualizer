@@ -9,7 +9,7 @@ class DrawBarGraph(Draw):
         bar_width = win.get_width() // (len(data_set) + 1)
         for i, height in enumerate(data_set):
             color = colors[i] if i < len(colors) else BLACK
-            pygame.draw.rect(win, color, (i * bar_width, win.get_height() - height, bar_width, height))
+            pygame.draw.rect(win, color, (i * bar_width + 10, win.get_height() - height, bar_width, height))
 
 class DrawList(Draw):
     def draw(self, win, colors, data_set, value_r = None):

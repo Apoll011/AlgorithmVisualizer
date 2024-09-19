@@ -10,9 +10,9 @@ FONT = pygame.font.SysFont('comicsans', 25)
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Algorithm Visualizer")
 
-main_surface = pygame.Surface((WIDTH * 0.7, HEIGHT * 0.7))
+main_surface = pygame.Surface((WIDTH * 0.69, HEIGHT * 0.7))
 config_surface = pygame.Surface((WIDTH * 0.3, HEIGHT))
-description_surface = pygame.Surface((WIDTH * 0.7, HEIGHT * 0.3))
+description_surface = pygame.Surface((WIDTH * 0.69, HEIGHT * 0.28))
 
 def main():
     running = True
@@ -45,8 +45,9 @@ def main():
                     algorithms[current_algo].generate_dataset()
 
         algorithms[current_algo].draw(main_surface, [BLACK] * len(algorithms[current_algo].data_set))
-        config_surface.fill(GREEN)
-        description_surface.fill(BLUE)
+        WIN.fill(BLACK)
+        description_surface.fill(WHITE)
+        config_surface.fill(WHITE)
 
         title = FONT.render(algorithms[current_algo].title(), 1, BLACK)
         description_surface.blit(title, (config_surface.get_width() // 2, 10))
@@ -63,7 +64,7 @@ def main():
         # Blit all surfaces to the main window
         WIN.blit(main_surface, (0, 0))
         WIN.blit(config_surface, (WIDTH - WIDTH * 0.3, 0))
-        WIN.blit(description_surface, (0, HEIGHT - HEIGHT * 0.3))
+        WIN.blit(description_surface, (0, HEIGHT - HEIGHT * 0.28))
         pygame.display.flip()
 
     pygame.quit()
