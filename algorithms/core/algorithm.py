@@ -57,7 +57,7 @@ class Algorithm:
             self.wait()
 
     def draw_dataset(self, win, colors):
-        self.drawer.draw(win, colors, self.data_set, self.value if self.send_value_to_draw else None)
+        self.drawer.draw(win, colors, self.data_set, self.value if self.send_value_to_draw else None, self.resolved)
 
     def run(self, win):
         pass  # To be implemented by subclasses

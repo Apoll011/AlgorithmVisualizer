@@ -4,23 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="Now it iterates inside draw method">
-      <change afterPath="$PROJECT_DIR$/algorithm/bubblesort/.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithm/bubblesort/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithm/dac/.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithm/dac/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithm/linear/.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithm/linear/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithms/core/constructor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/algorithms/bubblesort.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/bubblesort.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/algorithms/divideandconquer.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/divideandconquer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/algorithms/linearsearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/linearsearch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/algorithms/quicksort.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/quicksort.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/core/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/core/algorithm.py" afterDir="false" />
+    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="NOw the algorithm are complitely isolated from the code base (plugins)">
       <change beforePath="$PROJECT_DIR$/algorithms/core/draw.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/core/draw.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/core/visualizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/core/visualizer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,7 +290,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726750038796</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="NOw the algorithm are complitely isolated from the code base (plugins)">
+      <option name="closed" value="true" />
+      <created>1726755259866</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1726755259866</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -344,18 +337,10 @@
     <MESSAGE value="Added a new parameter for return value and value required (if set)" />
     <MESSAGE value="SEnd ALgorithm visualizer class to a separate file" />
     <MESSAGE value="Now it iterates inside draw method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now it iterates inside draw method" />
+    <MESSAGE value="NOw the algorithm are complitely isolated from the code base (plugins)" />
+    <option name="LAST_COMMIT_MESSAGE" value="NOw the algorithm are complitely isolated from the code base (plugins)" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/algorithms/core/algorithm.py</url>
-          <line>68</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="self.main" language="Python" />
