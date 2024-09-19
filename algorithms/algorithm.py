@@ -1,3 +1,5 @@
+import math
+
 import pygame
 import time
 
@@ -100,6 +102,7 @@ class Algorithm:
     def params(self):
         return {
             "Iterations": self.iterations,
+            "Expected Iterations": int(self.get_expected_iteration()),
             "Time complexity": self.time_complexity.value,
             "Time Took": self.get_time(),
             "Value": self.value if self.value_exists() else "NULL",
@@ -126,3 +129,21 @@ class Algorithm:
 
     def value_exists(self):
         return self.generator.value is not None
+
+    def get_expected_iteration(self):
+        n = self.generator.length
+        match self.time_complexity:
+            case TimeComplexity.O_LOG:
+                return math.log(n)
+            case TimeComplexity.O_NLOG:
+                return n * math.log(n)
+            case TimeComplexity.O_LINEAR:
+                return n
+            case TimeComplexity.O_QUADRATIC:
+                return n**2
+            case TimeComplexity.O_CONSTANT:
+                return 1
+            case TimeComplexity.O_EXPONENTIAL:
+                return 2**n
+            case TimeComplexity.O_FACTORIAL:
+                return math.factorial(n)
