@@ -2,11 +2,11 @@ import importlib
 import json
 import os
 
-from algorithms.core import AlgorithmType
-from algorithms.core.algorithm import Algorithm
-from algorithms.core.dataset_generator import RandomList
-from algorithms.core.draw import DrawBarGraph, DrawList
-from algorithms.core.time_complexity import TimeComplexity
+from algorithms import AlgorithmType
+from algorithms.algorithm import Algorithm
+from algorithms.dataset_generator import RandomList
+from algorithms.draw import DrawBarGraph, DrawList
+from algorithms.time_complexity import TimeComplexity
 
 class Constructor:
     def __init__(self, path):

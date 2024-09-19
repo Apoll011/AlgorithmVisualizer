@@ -1,10 +1,9 @@
 import pygame
 from pygame.event import Event
 
-from algorithms.core.algorithm import Algorithm
-from algorithms.core.constructor import Constructor
+from algorithms.algorithm import Algorithm
+from algorithms.constructor import Constructor
 from config import *
-from algorithms.algorithms import *
 
 class AlgorithmVisualizer:
     def __init__(self):

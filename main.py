@@ -1,5 +1,4 @@
-from algorithms.core.constructor import Constructor
-from algorithms.core.visualizer import AlgorithmVisualizer
+from algorithms.visualizer import AlgorithmVisualizer
 
 if __name__ == "__main__":
     visualizer = AlgorithmVisualizer()

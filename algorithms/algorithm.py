@@ -1,10 +1,10 @@
 import pygame
 import time
 
-from algorithms.core import AlgorithmType
-from algorithms.core.dataset_generator import Generator
-from algorithms.core.draw import Draw
-from algorithms.core.time_complexity import TimeComplexity
+from algorithms import AlgorithmType
+from algorithms.dataset_generator import Generator
+from algorithms.draw import Draw
+from algorithms.time_complexity import TimeComplexity
 from config import WHITE
 
 class Algorithm:
