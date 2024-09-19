@@ -23,6 +23,7 @@ class Algorithm:
 
     description = "Algorithm "
     def __init__(self, algorithm_name):
+        self.main = None
         self.returned = None
         self.master = None
         self.font = None
@@ -43,8 +44,10 @@ class Algorithm:
     def set_font(self, font):
         self.font = font
 
-    def draw(self, win, colors):
-        self.iterate()
+    def draw(self, colors, win = None):
+        if win is None:
+            self.iterate()
+            win = self.main
         win.fill(WHITE)
         try:
             self.draw_dataset(win, colors)
@@ -62,12 +65,14 @@ class Algorithm:
     def execute(self, win, WIN):
         if not self.resolved:
             self.master = WIN
+            self.main = win
             self.iterations = 0
             s_time = time.time()
-            self.returned = self.run(win)
+            self.returned = self.run()
             self.time_took = time.time() - s_time
             self.set_resolved()
             self.master = None
+            self.main = None
 
     def wait(self):
         if self.can_wait:
@@ -110,6 +115,10 @@ class Algorithm:
     @property
     def data_set(self):
         return  self.generator.get_dataset()
+
+    @data_set.setter
+    def data_set(self, new_dataset):
+        self.generator.data_set = new_dataset
 
     @property
     def value(self):

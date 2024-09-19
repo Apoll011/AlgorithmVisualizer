@@ -4,11 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="Added a new parameter for return value and value required (if set)">
-      <change afterPath="$PROJECT_DIR$/algorithms/core/visualizer.py" afterDir="false" />
+    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="Now it iterates inside draw method">
+      <change afterPath="$PROJECT_DIR$/algorithm/bubblesort/.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithm/bubblesort/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithm/dac/.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithm/dac/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithm/linear/.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithm/linear/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithms/core/constructor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/algorithms/bubblesort.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/bubblesort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/algorithms/divideandconquer.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/divideandconquer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algorithms/algorithms/linearsearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/linearsearch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algorithms/algorithms/quicksort.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithms/quicksort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/core/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/core/algorithm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/core/draw.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/core/draw.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/core/visualizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/core/visualizer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,20 +53,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scratch.executor&quot;: &quot;Run&quot;,
-    &quot;Python.t.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.main.executor": "Run",
+    "Python.scratch.executor": "Run",
+    "Python.t.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/pegasus/development/AlgoVisu/algorithm"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;Python&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Python"
     ]
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/algorithm" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="AlgoVisu" />
@@ -272,7 +289,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726748034024</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="SEnd ALgorithm visualizer class to a separate file">
+      <option name="closed" value="true" />
+      <created>1726750006866</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1726750006867</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Now it iterates inside draw method">
+      <option name="closed" value="true" />
+      <created>1726750038796</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1726750038796</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -309,6 +342,24 @@
     <MESSAGE value="Refactored the code" />
     <MESSAGE value="Fixed some bug related to Display" />
     <MESSAGE value="Added a new parameter for return value and value required (if set)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a new parameter for return value and value required (if set)" />
+    <MESSAGE value="SEnd ALgorithm visualizer class to a separate file" />
+    <MESSAGE value="Now it iterates inside draw method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now it iterates inside draw method" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/algorithms/core/algorithm.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="self.main" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

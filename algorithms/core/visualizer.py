@@ -2,6 +2,7 @@ import pygame
 from pygame.event import Event
 
 from algorithms.core.algorithm import Algorithm
+from algorithms.core.constructor import Constructor
 from config import *
 from algorithms.algorithms import *
 
@@ -19,14 +20,12 @@ class AlgorithmVisualizer:
 
         self.algorithms: list[Algorithm] = []
         self.current_algo = 0
-        self.get_algorithms()
 
         self.running = True
 
-    def get_algorithms(self):
-        algorithms = [BubbleSort(), QuickSort(), LinearSearchAlgorithm(),
-                      DivideAndConquerAlgorithm()]  # Add more algorithms here
-        self.algorithms = algorithms
+    def get_algorithms(self, path):
+        constructor = Constructor(path)
+        self.algorithms = constructor.algorithms
 
     def events(self, event: Event):
         if event.type == pygame.QUIT:
@@ -69,7 +68,7 @@ class AlgorithmVisualizer:
         pygame.quit()
 
     def draw(self):
-        self.current.draw(self.main_surface, [BLACK] * len(self.current.data_set))
+        self.current.draw([BLACK] * len(self.current.data_set), win = self.main_surface)
 
         self.win.fill(BLACK)
         self.description_surface.fill(WHITE)

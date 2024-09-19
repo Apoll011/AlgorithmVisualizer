@@ -15,7 +15,7 @@ class QuickSort(Algorithm):
         self.drawer = DrawBarGraph()
         self.generate_dataset()
 
-    def partition(self, start, end, win):
+    def partition(self, start, end):
         pivot = self.data_set[end]
         i = start - 1
         for j in range(start, end):
@@ -23,16 +23,16 @@ class QuickSort(Algorithm):
                 i += 1
                 self.data_set[i], self.data_set[j] = self.data_set[j], self.data_set[i]
             colors = [RED if x == end else GREEN if x == i or x == j else BLACK for x in range(len(self.data_set))]
-            self.draw(win, colors)
+            self.draw(colors)
             self.data_set[i + 1], self.data_set[end] = self.data_set[end], self.data_set[i + 1]
         return i + 1
 
-    def quick_sort(self, start, end, win):
+    def quick_sort(self, start, end):
         if start < end:
-            pi = self.partition(start, end, win)
-            self.quick_sort(start, pi - 1, win)
-            self.quick_sort(pi + 1, end, win)
+            pi = self.partition(start, end)
+            self.quick_sort(start, pi - 1)
+            self.quick_sort(pi + 1, end)
 
-    def run(self, win):
-        self.quick_sort(0, len(self.data_set) - 1, win)
+    def run(self):
+        self.quick_sort(0, len(self.data_set) - 1)
         return self.data_set

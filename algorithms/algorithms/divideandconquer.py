@@ -19,18 +19,18 @@ class DivideAndConquerAlgorithm(Algorithm):
         self.send_value_to_draw = True
         self.return_name = "Index"
 
-    def run(self, win):
-        return self.search(self.data_set, win)
+    def run(self):
+        return self.search(self.data_set)
 
-    def search(self, dataset, win):
+    def search(self, dataset):
         n = len(self.data_set)
         half = len(dataset)//2
         half_value = dataset[half]
         colors = [GREEN if x == self.data_set.index(half_value) else BLACK for x in range(n)]
-        self.draw(win, colors)
+        self.draw(colors)
         if half_value == self.value:
             return self.data_set.index(half_value)
         elif half_value > self.value:
-            return self.search(dataset[:half], win)
+            return self.search(dataset[:half])
         else:
-            return self.search(dataset[half+1:], win)
+            return self.search(dataset[half+1:])

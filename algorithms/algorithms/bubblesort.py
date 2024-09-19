@@ -14,12 +14,12 @@ class BubbleSort(Algorithm):
         self.algorithm_type = AlgorithmType.SORTING
         self.drawer = DrawBarGraph()
 
-    def run(self, win):
+    def run(self):
         n = len(self.data_set)
         for i in range(n):
             for j in range(0, n - i - 1):
                 if self.data_set[j] > self.data_set[j + 1]:
                     self.data_set[j], self.data_set[j + 1] = self.data_set[j + 1], self.data_set[j]
                 colors = [GREEN if x == j or x == j + 1 else BLACK for x in range(n)]
-                self.draw(win, colors)
+                self.draw(colors)
         return self.data_set

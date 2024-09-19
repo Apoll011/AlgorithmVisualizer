@@ -17,10 +17,10 @@ class LinearSearchAlgorithm(Algorithm):
         self.return_name = "Index"
         self.waiting_time = 0.1
 
-    def run(self, win):
+    def run(self):
         n = len(self.data_set)
         for i in range(n):
             colors = [BLUE if self.value == self.data_set[x] else GREEN if x == i else BLACK for x in range(n)]
-            self.draw(win, colors)
+            self.draw(colors)
             if self.data_set[i] == self.value:
                 return i
