@@ -145,7 +145,7 @@ class DrawScatterPlot(Draw):
                 desired_value_position = (int(x), int(y))
 
             if (value_r is not None and value_r == point and colors[data_set.index(point) % len(colors)] != GREEN) or current == point:
-                color = BLUE if not resolved or current == point else GREEN
+                color = BLUE if (not resolved or current == point) and (current is not None and value_r != point) else RED if current is not None else GREEN
             else:
                 color = colors[data_set.index(point) % len(colors)]
             pygame.draw.circle(win, color, (int(x), int(y)), 5)
