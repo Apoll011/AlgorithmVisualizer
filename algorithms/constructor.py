@@ -30,6 +30,7 @@ class Constructor:
             algorithm_obj.generator = self.generate_generator(config["generator"])
             algorithm_obj.send_value_to_draw = config["send_value_to_draw"]
             algorithm_obj.return_name = config["return_name"]
+            algorithm_obj.value_name = config["value_name"]
             algorithm_obj.generate_dataset()
             algorithm_obj.run = lambda: run_method(algorithm_obj)
 
@@ -85,7 +86,8 @@ class Constructor:
                 }
             },
             "send_value_to_draw": False,
-            "return_name": "Return"
+            "return_name": "Return",
+            "value_name": "Value"
         } | config
 
         return default

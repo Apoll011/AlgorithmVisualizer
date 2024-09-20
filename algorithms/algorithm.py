@@ -37,6 +37,7 @@ class Algorithm:
         self.drawer: Draw | None = None
         self.send_value_to_draw = False
         self.return_name = "Returned"
+        self.value_name = "Value"
 
     def generate_dataset(self):
         self.generator.generate()
@@ -63,7 +64,7 @@ class Algorithm:
     def draw_dataset(self, win, colors):
         self.drawer.draw(win, colors, self.data_set, self.value if self.send_value_to_draw else None, self.resolved, self.current)
 
-    def run(self, win):
+    def run(self, win) -> int | list:
         pass  # To be implemented by subclasses
 
     def execute(self, win, WIN):
@@ -107,7 +108,7 @@ class Algorithm:
             "Expected Iterations": int(self.get_expected_iteration()),
             "Time complexity": self.time_complexity.value,
             "Time Took": self.get_time(),
-            "Value": self.value if self.value_exists() else "NULL",
+            f"{self.value_name}": self.value if self.value_exists() else "NULL",
             f"{self.return_name}": self.returned if type(self.returned) != list else "[...]"
         }
 
