@@ -4,8 +4,7 @@ import os
 
 from algorithms import AlgorithmType
 from algorithms.algorithm import Algorithm
-from algorithms.dataset_generator import RandomList
-from algorithms.draw import DrawBarGraph, DrawList
+from algorithms.dataset_generator import RandomList, RandomMultidimensionalSpace, SequentialNumber
 from algorithms.time_complexity import TimeComplexity
 from algorithms.draw import DrawBarGraph, DrawLineGraph, DrawList, DrawPieChart, DrawScatterPlot
 
@@ -65,8 +64,12 @@ class Constructor:
         match params["name"]:
             case "r_list":
                 return RandomList(**params["args"])
+            case "r_dimension":
+                return RandomMultidimensionalSpace(**params["args"])
+            case "sequential":
+                return SequentialNumber(**params["args"])
             case _:
-                raise KeyError(f"Unknown Dataset generator {name}")
+                raise KeyError(f"Unknown Dataset generator {params["name"]}")
 
     @staticmethod
     def filter_config(config):

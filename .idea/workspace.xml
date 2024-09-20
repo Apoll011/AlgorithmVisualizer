@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="Fixed location of title">
-      <change beforePath="$PROJECT_DIR$/algorithms/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithm.py" afterDir="false" />
+    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="Added parameter for expected iterations based on time complexity">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/dataset_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/dataset_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/draw.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/draw.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -358,7 +360,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726756693946</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Added parameter for expected iterations based on time complexity">
+      <option name="closed" value="true" />
+      <created>1726757099083</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1726757099083</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -373,7 +383,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added abillity to dynamically change the tittle of an algorithm" />
     <MESSAGE value="Fixed bug in witch the sorted functionallyti would not work on the first dataset generation" />
     <MESSAGE value="Added a new Algorithm Divid and conquer" />
     <MESSAGE value="Added buttun G to generate dataset" />
@@ -398,7 +407,8 @@
     <MESSAGE value="Fixed bug in linear algorithm" />
     <MESSAGE value="Fixed typo" />
     <MESSAGE value="Fixed location of title" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed location of title" />
+    <MESSAGE value="Added parameter for expected iterations based on time complexity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added parameter for expected iterations based on time complexity" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
