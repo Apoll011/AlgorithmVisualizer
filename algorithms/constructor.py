@@ -7,6 +7,7 @@ from algorithms.algorithm import Algorithm
 from algorithms.dataset_generator import RandomList
 from algorithms.draw import DrawBarGraph, DrawList
 from algorithms.time_complexity import TimeComplexity
+from algorithms.draw import DrawBarGraph, DrawLineGraph, DrawList, DrawPieChart, DrawScatterPlot
 
 class Constructor:
     def __init__(self, path):
@@ -42,6 +43,12 @@ class Constructor:
                 return DrawList()
             case "bar":
                 return DrawBarGraph()
+            case "line":
+                return DrawLineGraph()
+            case "pie":
+                return DrawPieChart()
+            case "scatter":
+                return DrawScatterPlot()
             case _:
                 raise KeyError(f"Unknown draw class {name}")
 
