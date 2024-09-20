@@ -5,10 +5,10 @@ from config import *
 import pygame
 
 class Draw:
-    def draw(self, win: Surface, colors: list[tuple[int, int, int]], data_set: list[Any | int], value_r: int | None=None, resolved: bool = False): ...
+    def draw(self, win: Surface, colors: list[tuple[int, int, int]], data_set: list[Any | int], value_r: int | None=None, resolved: bool = False, current = None): ...
 
 class DrawBarGraph(Draw):
-    def draw(self, win: Surface, colors: list[tuple[int, int, int]], data_set: list[Any | int], value_r: int | None=None, resolved: bool = False):
+    def draw(self, win: Surface, colors: list[tuple[int, int, int]], data_set: list[Any | int], value_r: int | None=None, resolved: bool = False, current = None):
         bar_width = win.get_width() // (len(data_set) + 10)
         for i, height in enumerate(data_set):
             if value_r is not None and value_r == height and colors[i] != GREEN:
@@ -21,7 +21,7 @@ class DrawBarGraph(Draw):
 
 class DrawList(Draw):
     def draw(self, win: Surface, colors: list[tuple[int, int, int]], data_set: list[Any | int],
-             value_r: int | None = None, resolved: bool = False):
+             value_r: int | None = None, resolved: bool = False, current = None):
         max_squares_per_row = win.get_width() // 50  # Assuming each square is 80x80 with some padding
         square_size = 40
         padding = 10
@@ -50,7 +50,7 @@ class DrawList(Draw):
 
 class DrawPieChart(Draw):
     def draw(self, win: Surface, colors: list[tuple[int, int, int]], data_set: list[Any | int],
-             value_r: int | None = None, resolved: bool = False):
+             value_r: int | None = None, resolved: bool = False, current = None):
         total = sum(data_set)
         center = (win.get_width() // 2, win.get_height() // 2)
         radius = min(win.get_width(), win.get_height()) // 3
@@ -77,7 +77,7 @@ class DrawPieChart(Draw):
 
 class DrawLineGraph(Draw):
     def draw(self, win: Surface, colors: list[tuple[int, int, int]], data_set: list[Any | int],
-             value_r: int | None = None, resolved: bool = False):
+             value_r: int | None = None, resolved: bool = False, current = None):
         margin = 50
         graph_width = win.get_width() - 2 * margin
         graph_height = win.get_height() - 2 * margin
@@ -116,13 +116,16 @@ class DrawLineGraph(Draw):
 
 class DrawScatterPlot(Draw):
     def draw(self, win: Surface, colors: list[tuple[int, int, int]], data_set: list[tuple[int, int]],
-             value_r: int | None = None, resolved: bool = False):
+             value_r: int | None = None, resolved: bool = False, current = None):
         margin = 50
         graph_width = win.get_width() - 2 * margin
         graph_height = win.get_height() - 2 * margin
 
         max_x = max(point[0] for point in data_set)
         max_y = max(point[1] for point in data_set)
+
+        desired_value_position = None
+        current_position = None
 
         # Draw axes
         pygame.draw.line(
@@ -136,19 +139,16 @@ class DrawScatterPlot(Draw):
             x = margin + (point[0] / max_x) * graph_width
             y = win.get_height() - margin - (point[1] / max_y) * graph_height
 
-            color = colors[data_set.index(point) % len(colors)]
+            if current is not None and current == point:
+                current_position = (int(x), int(y))
+            elif value_r is not None and value_r == point:
+                desired_value_position = (int(x), int(y))
+
+            if (value_r is not None and value_r == point and colors[data_set.index(point) % len(colors)] != GREEN) or current == point:
+                color = BLUE if not resolved or current == point else GREEN
+            else:
+                color = colors[data_set.index(point) % len(colors)]
             pygame.draw.circle(win, color, (int(x), int(y)), 5)
 
-        # Draw axis labels
-        for i in range(5):
-            # X-axis
-            x_value = int(max_x * (i / 4))
-            x = margin + (i / 4) * graph_width
-            label = font.render(str(x_value), True, WHITE)
-            win.blit(label, (x - label.get_width() // 2, win.get_height() - margin + 10))
-
-            # Y-axis
-            y_value = int(max_y * (i / 4))
-            y = win.get_height() - margin - (i / 4) * graph_height
-            label = font.render(str(y_value), True, WHITE)
-            win.blit(label, (margin - 40, y - label.get_height() // 2))
+        if current_position is not None and desired_value_position is not None:
+            pygame.draw.line(win, RED, current_position, desired_value_position)

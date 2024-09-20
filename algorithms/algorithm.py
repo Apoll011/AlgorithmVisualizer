@@ -24,6 +24,8 @@ class Algorithm:
     time_took: float
 
     description = "Algorithm "
+
+    current = None
     def __init__(self, algorithm_name):
         self.main = None
         self.returned = None
@@ -59,7 +61,7 @@ class Algorithm:
             self.wait()
 
     def draw_dataset(self, win, colors):
-        self.drawer.draw(win, colors, self.data_set, self.value if self.send_value_to_draw else None, self.resolved)
+        self.drawer.draw(win, colors, self.data_set, self.value if self.send_value_to_draw else None, self.resolved, self.current)
 
     def run(self, win):
         pass  # To be implemented by subclasses
