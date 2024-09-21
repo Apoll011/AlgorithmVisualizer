@@ -17,4 +17,4 @@ def execute(algorithm):
         algorithm.current = shortest
         algorithm.draw(colors)
 
-    return shortest, shortest_length
+    return shortest, algorithm.format_float(shortest_length)
