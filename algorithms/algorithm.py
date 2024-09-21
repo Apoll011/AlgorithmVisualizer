@@ -108,8 +108,10 @@ class Algorithm:
             "Expected Iterations": int(self.get_expected_iteration()),
             "Time complexity": self.time_complexity.value,
             "Time Took": self.get_time(),
-            f"{self.value_name}": self.value if self.value_exists() else "NULL",
         }
+
+        if self.value_exists():
+            params[self.value_name] = self.value
         if type(self.return_name) == list:
             i = 0
             for elements in self.return_name:

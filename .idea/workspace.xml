@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="CHanged some of the values display in parameter for better understanding">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/dataset_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/dataset_generator.py" afterDir="false" />
+    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="Now we can chose how many values we want">
+      <change beforePath="$PROJECT_DIR$/algorithms/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -450,7 +449,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726943495064</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Now we can chose how many values we want">
+      <option name="closed" value="true" />
+      <created>1726944145556</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1726944145556</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -465,7 +472,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added support for left arrow click" />
     <MESSAGE value="Refactored the code" />
     <MESSAGE value="Fixed some bug related to Display" />
     <MESSAGE value="Added a new parameter for return value and value required (if set)" />
@@ -490,7 +496,8 @@
     <MESSAGE value="Improved the parameters display method" />
     <MESSAGE value="Now distance in closets distance is formated" />
     <MESSAGE value="CHanged some of the values display in parameter for better understanding" />
-    <option name="LAST_COMMIT_MESSAGE" value="CHanged some of the values display in parameter for better understanding" />
+    <MESSAGE value="Now we can chose how many values we want" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now we can chose how many values we want" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
