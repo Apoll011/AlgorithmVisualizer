@@ -32,6 +32,7 @@ class Constructor:
             algorithm_obj.return_name = config["return_name"]
             algorithm_obj.value_name = config["value_name"]
             algorithm_obj.generate_dataset()
+            algorithm_obj.steps = config["steps"]
             algorithm_obj.run = lambda: run_method(algorithm_obj)
 
             self.algorithms.append(algorithm_obj)
@@ -80,11 +81,9 @@ class Constructor:
             "generator": {
                 "name": "r_list",
                 "args": {
-                    "create_value": False,
-                    "dataset_unique": False,
-                    "is_dataset_sorted": False,
                 }
             },
+            "steps": {},
             "send_value_to_draw": False,
             "return_name": "Return",
             "value_name": "Value"

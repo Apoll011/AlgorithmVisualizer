@@ -7,7 +7,7 @@ from algorithms import AlgorithmType
 from algorithms.dataset_generator import Generator
 from algorithms.draw import Draw
 from algorithms.time_complexity import TimeComplexity
-from config import WHITE
+from config import *
 
 class Algorithm:
     waiting_time = 0.01
@@ -27,6 +27,7 @@ class Algorithm:
 
     current = None
     def __init__(self, algorithm_name):
+        self.description_window = None
         self.main = None
         self.returned = None
         self.master = None
@@ -38,6 +39,8 @@ class Algorithm:
         self.send_value_to_draw = False
         self.return_name = "Returned"
         self.value_name = "Value"
+        self.steps = {}
+        self.current_step = ""
 
     def generate_dataset(self):
         self.generator.generate()
@@ -64,13 +67,14 @@ class Algorithm:
     def draw_dataset(self, win, colors):
         self.drawer.draw(win, colors, self.data_set, self.value if self.send_value_to_draw else None, self.resolved, self.current)
 
-    def run(self, win) -> int | list:
+    def run(self) -> int | list:
         pass  # To be implemented by subclasses
 
-    def execute(self, win, WIN):
+    def execute(self, main_window, description_window, master_window):
         if not self.resolved:
-            self.master = WIN
-            self.main = win
+            self.master = master_window
+            self.main = main_window
+            self.description_window = description_window
             self.iterations = 0
             s_time = time.time()
             self.returned = self.run()
@@ -78,6 +82,7 @@ class Algorithm:
             self.set_resolved()
             self.master = None
             self.main = None
+            self.description_window = None
 
     def wait(self):
         if self.can_wait:
@@ -163,3 +168,22 @@ class Algorithm:
                 return 2**n
             case TimeComplexity.O_FACTORIAL:
                 return math.factorial(n)
+
+    def get_current_step(self):
+        return self.current_step
+
+    def step(self, step_name = None, master_win = None, description_win = None):
+        self.current_step = step_name
+
+        master = master_win if self.master is None else self.master
+        description = description_win if self.description_window is None else self.description_window
+
+        y = 25
+        for step_name, (level, step_description) in self.steps.items():
+            y += 17
+            step = self.font.render(
+                f"{""}{step_description}", 1, BLACK, RED if step_name == self.get_current_step() else WHITE
+                )
+            description.blit(step, (10 + ((level - 1) * 15), y))
+
+        master.blit(description, (0, HEIGHT - HEIGHT * 0.28))

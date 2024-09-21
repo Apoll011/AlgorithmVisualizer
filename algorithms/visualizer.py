@@ -33,7 +33,7 @@ class AlgorithmVisualizer:
             if event.key == pygame.K_SPACE:
                 if self.current.is_resolved():
                     self.current.generate_dataset()
-                self.current.execute(self.main_surface, self.win)
+                self.current.execute(self.main_surface, self.description_surface, self.win)
             if event.key == pygame.K_RIGHT:
                 self.current.generate_dataset()
                 self.current_algo = (self.current_algo + 1) % len(self.algorithms)
@@ -84,6 +84,7 @@ class AlgorithmVisualizer:
         self.description_surface.blit(title, (self.description_surface.get_width() //2 - title.get_width() //2, 10))
         description_text = self.font.render(self.current.description, True, BLACK)
         self.description_surface.blit(description_text, (10, 25))
+        self.current.step(master_win=self.win, description_win=self.description_surface)
 
         # Blit all surfaces to the main window
         self.win.blit(self.main_surface, (0, 0))

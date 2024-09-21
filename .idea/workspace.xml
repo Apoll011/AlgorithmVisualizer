@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="Now we can chose how many values we want">
+    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="If value is none do not show it">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithm/bubblesort/.config" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/bubblesort/.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithm/bubblesort/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/bubblesort/run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algorithms/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/constructor.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/constructor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/visualizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/visualizer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -457,7 +462,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726944145556</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="If value is none do not show it">
+      <option name="closed" value="true" />
+      <created>1726944420273</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1726944420273</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -472,7 +485,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored the code" />
     <MESSAGE value="Fixed some bug related to Display" />
     <MESSAGE value="Added a new parameter for return value and value required (if set)" />
     <MESSAGE value="SEnd ALgorithm visualizer class to a separate file" />
@@ -497,7 +509,8 @@
     <MESSAGE value="Now distance in closets distance is formated" />
     <MESSAGE value="CHanged some of the values display in parameter for better understanding" />
     <MESSAGE value="Now we can chose how many values we want" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now we can chose how many values we want" />
+    <MESSAGE value="If value is none do not show it" />
+    <option name="LAST_COMMIT_MESSAGE" value="If value is none do not show it" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
