@@ -5,7 +5,8 @@ class Generator:
     value: Any | None = None
     data_set: Any | None | list = None
 
-    def __init__(self, length = 50, create_value = False, is_dataset_sorted = False, dataset_unique = False, start = 10, end = 400, step = 1, dimensions = 2):
+    def __init__(self, length=50, create_value=False, is_dataset_sorted=False, dataset_unique=False, start=10, end=400,
+                 step=1, dimensions=2, n_value=1):
         self.length = length
         self.create_value = create_value
         self.is_dataset_sorted = is_dataset_sorted
@@ -14,12 +15,13 @@ class Generator:
         self.end = end
         self.step = step
         self.dimensions = dimensions
+        self.n_value = n_value
 
     def generate(self): ...
 
     def get_value(self):
         if self.value is None:
-            self.value = random.choice(self.data_set)
+            self.value = self.__generate_value()
 
         return self.value
 
@@ -35,8 +37,11 @@ class Generator:
         if self.is_dataset_sorted:
             self.data_set = sorted(self.data_set)
         if self.create_value:
-            self.value = random.choice(self.data_set)
+            self.value = self.__generate_value()
 
+    def __generate_value(self):
+        return self.get_random_element() if self.n_value == 1 else [self.get_random_element() for _ in
+                                                                          range(self.n_value)]
     def get_random_element(self):
         element = random.choice(self.data_set)
         if self.value is not None and element != self.value:
