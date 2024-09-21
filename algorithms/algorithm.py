@@ -103,20 +103,31 @@ class Algorithm:
             self.master.blit(main_surface, (0, 0))
 
     def params(self):
-        return {
+        params =  {
             "Iterations": self.iterations,
             "Expected Iterations": int(self.get_expected_iteration()),
             "Time complexity": self.time_complexity.value,
             "Time Took": self.get_time(),
             f"{self.value_name}": self.value if self.value_exists() else "NULL",
-            f"{self.return_name}": self.returned if type(self.returned) != list else "[...]"
         }
+        if type(self.return_name) == list:
+            i = 0
+            for elements in self.return_name:
+                params[elements] = "NULL" if self.returned is None or len(self.returned) == 0 else self.returned[i] if type(self.returned[i]) != list else "[...]"
+                i += 1
+        else:
+            params[self.return_name] = "NULL" if self.returned is None else self.returned if type(self.returned) != list else "[...]"
+        return params
 
     def get_time(self):
         try:
-            return self.time_took
+            return self.format_float(self.time_took)
         except UnboundLocalError:
             return 0
+
+    @staticmethod
+    def format_float(value):
+        return "{:.4f}".format(value)
 
     @property
     def data_set(self):
