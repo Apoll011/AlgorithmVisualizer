@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="Added parameter for expected iterations based on time complexity">
+    <list default="true" id="b58ac6bc-5328-4f4f-a0d9-4368c88d497e" name="Changes" comment="Fixed bug related to colors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/dataset_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/dataset_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/draw.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/draw.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithm/closestpoint/.config" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/closestpoint/.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algorithm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +28,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -42,12 +43,13 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python.dataset_generator.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.scratch.executor&quot;: &quot;Run&quot;,
     &quot;Python.t.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/pegasus/development/AlgoVisu/algorithm/quicksort&quot;
+    &quot;last_opened_file_path&quot;: &quot;/home/pegasus/development/AlgoVisu/algorithm/closestpoint&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
@@ -57,6 +59,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/algorithm/closestpoint" />
       <recent name="$PROJECT_DIR$/algorithm/quicksort" />
       <recent name="$PROJECT_DIR$/algorithm" />
     </key>
@@ -368,7 +371,63 @@
       <option name="project" value="LOCAL" />
       <updated>1726757099083</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Added more drawing abilities">
+      <option name="closed" value="true" />
+      <created>1726841982084</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1726841982084</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Added more generators">
+      <option name="closed" value="true" />
+      <created>1726842003709</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1726842003709</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Changed the generator for divide and conquer search">
+      <option name="closed" value="true" />
+      <created>1726845336867</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1726845336867</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Added current for the draw class to know the current point of the algorithm">
+      <option name="closed" value="true" />
+      <created>1726845418604</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1726845418604</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Added algorithm to find the closet point on an graph">
+      <option name="closed" value="true" />
+      <created>1726845440305</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1726845440305</updated>
+    </task>
+    <task id="LOCAL-00039" summary="new param defined name in . config">
+      <option name="closed" value="true" />
+      <created>1726846129866</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1726846129866</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Fixed bug related to colors">
+      <option name="closed" value="true" />
+      <created>1726846496944</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1726846496944</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -383,13 +442,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed bug in witch the sorted functionallyti would not work on the first dataset generation" />
-    <MESSAGE value="Added a new Algorithm Divid and conquer" />
-    <MESSAGE value="Added buttun G to generate dataset" />
-    <MESSAGE value="Added more algorithm data loke time complexity iteration time took" />
-    <MESSAGE value="Implemented new data into the algorithm" />
-    <MESSAGE value="Added iterate to quick sort" />
-    <MESSAGE value="Added multiple surfaces" />
     <MESSAGE value="Now height and width are get fro win not config" />
     <MESSAGE value="Now the algorithm visualizer is a surface" />
     <MESSAGE value="Added support for multiple window" />
@@ -408,7 +460,14 @@
     <MESSAGE value="Fixed typo" />
     <MESSAGE value="Fixed location of title" />
     <MESSAGE value="Added parameter for expected iterations based on time complexity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added parameter for expected iterations based on time complexity" />
+    <MESSAGE value="Added more drawing abilities" />
+    <MESSAGE value="Added more generators" />
+    <MESSAGE value="Changed the generator for divide and conquer search" />
+    <MESSAGE value="Added current for the draw class to know the current point of the algorithm" />
+    <MESSAGE value="Added algorithm to find the closet point on an graph" />
+    <MESSAGE value="new param defined name in . config" />
+    <MESSAGE value="Fixed bug related to colors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug related to colors" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
