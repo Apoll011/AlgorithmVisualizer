@@ -1,5 +1,5 @@
 # Set up display
-WIDTH, HEIGHT = 800, 600
+WIDTH, HEIGHT = 1200, 600
 
 # Colors
 WHITE = (255, 255, 255)
